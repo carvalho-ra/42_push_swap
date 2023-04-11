@@ -1,30 +1,25 @@
 NAME = push_swap
 
 SRCS = push_swap.c \
+	nodes.c \
 
 OBJS = $(SRCS:.c=.o)
 
 CC = cc -Wall -Wextra -Werror
 
 INC = -Ilibft -Llibft -lft \
-		-Imlx -Lmlx -lmlx -framework OpenGL -framework AppKit
 
-#LIBFT = libft/libft.a
-
-#MLX = mlx/libmlx.a
+LIBFT = libft/libft.a
 
 all: $(NAME)
 
 $(LIBFT):
 	cd libft && $(MAKE)
 
-$(MLX): 
-	cd mlx && $(MAKE)
-
 %.o: %.c
 	$(CC) -c $< -o $@
 
-$(NAME): $(LIBFT) $(MLX) $(OBJS)
+$(NAME): $(LIBFT) $(OBJS)
 	$(CC) $(OBJS) $(INC) -o $(NAME)
 
 clean:
@@ -33,8 +28,7 @@ clean:
 	
 fclean: clean
 	$(RM) $(NAME) $(LIBFT)
-	cd mlx && $(MAKE) clean
 
 re: fclean all
 
-.PHONY: all bonus libft clean fclean re
+.PHONY: all libft clean fclean re
