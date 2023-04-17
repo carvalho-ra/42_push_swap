@@ -1,11 +1,11 @@
 NAME = push_swap
 
 SRCS = push_swap.c \
-	nodes.c \
+	list.c \
 
 OBJS = $(SRCS:.c=.o)
 
-CC = cc -Wall -Wextra -Werror
+CC = cc -g -Wall -Wextra -Werror
 
 INC = -Ilibft -Llibft -lft \
 
