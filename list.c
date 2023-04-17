@@ -15,10 +15,9 @@ t_node  *list(int data)
 void    add_node_bottom(t_node **head, t_node *node)
 {
     t_node  *tmp;
+    
     if (!node)
         return ;
-    
-
     if (!*head)
     {
         *head = node;
