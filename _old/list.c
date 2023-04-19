@@ -1,7 +1,7 @@
 #include "push_swap.h" 
 
 //list creation (head)
-t_list  *create_list(char name)
+t_list  *create_list()
 {
     //create a pointer (s_list type)
     t_list  *list;
@@ -10,7 +10,6 @@ t_list  *create_list(char name)
     //check if malloc returns a valid space
         return (NULL);
     //begining of the list points to NULL
-    list->name = name;
     list->head = NULL;
     list->tail = NULL;
     //returns a pointer to a s_list type
