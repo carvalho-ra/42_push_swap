@@ -29,6 +29,7 @@ void    add_node_top(t_list *list, int data)
         //s_node_create already creates a node pointing to NULL
         list->head = new_node;
         list->tail = new_node;
+        list->size++;
     }
     //if list is not empty
     else
@@ -37,6 +38,7 @@ void    add_node_top(t_list *list, int data)
         new_node->next = list->head;
         //now head of the list can point to the added node
         list->head = new_node;
+        list->size++;
     }
     //in both cases the code works because if the list is empty it points to NULL
     //and first line of else does exactly that
@@ -60,6 +62,7 @@ void    add_node_bottom(t_list *list, int data)
         //the pointer to the list points to the new node created
         list->head = new_node;
         list->tail = new_node;
+        list->size++;
     }
     else
     {
@@ -73,6 +76,7 @@ void    add_node_bottom(t_list *list, int data)
         //tmp->next = new_node;
         list->tail->next = new_node;
         list->tail = new_node; //list->tail->next;
+        list->size++;
     }
 }
 

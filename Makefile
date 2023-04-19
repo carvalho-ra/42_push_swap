@@ -3,7 +3,7 @@ NAME = push_swap
 SRCS = push_swap.c \
 	list.c \
 	node.c \
-	sort_op.c \
+	sort_ops.c \
 
 OBJS = $(SRCS:.c=.o)
 

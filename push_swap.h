@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcarvalh <rcarvalh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 11:37:06 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/19 12:22:21 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/19 16:46:27 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_node
 typedef struct s_list
 {
 	char	name;
+	unsigned int	size;
 	t_node	*head;
 	t_node	*tail;
 }	t_list;
@@ -43,6 +44,9 @@ t_list  *create_list(char name);
 
 //function prototypes - sort operations
 void    swap(t_list *list);
+void    rotate(t_list *list);
+void    rev_rotate(t_list *list);
+void    push(t_list *receive, t_list *push);
 
 //function prototypes - sorting
 //radix();

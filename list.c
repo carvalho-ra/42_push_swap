@@ -11,6 +11,7 @@ t_list  *create_list(char name)
         return (NULL);
     //begining of the list points to NULL
     list->name = name;
+    list->size = 0;
     list->head = NULL;
     list->tail = NULL;
     //returns a pointer to a s_list type

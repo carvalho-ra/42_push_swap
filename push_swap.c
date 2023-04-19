@@ -10,7 +10,7 @@ void    print_list(t_list *list)
     tmp = list->head;
     
     //for printing purposes, print begining of the list
-    printf("list_%c -> ", list->name);
+    printf("list_%c (size = %i)-> ", list->name, list->size);
 
     //while the tmp pointer in pointing to some node (there's a node in the list)
     while(tmp)
@@ -38,7 +38,12 @@ int main(int ac, char **av)
         add_node_bottom(list_a, ft_atoi(av[i]));
         i++;
     }
-    swap(list_a);
+    print_list(list_a);
+    // swap(list_a);
+    // print_list(list_a);
+    // rotate(list_a);
+    //rev_rotate(list_a);
+    push(list_b, list_a);
     print_list(list_a);
     print_list(list_b);
 }
