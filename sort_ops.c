@@ -27,6 +27,7 @@ void    swap(t_list *list)
         //old third node points to the first node
         sec->next = first;
     }
+    ft_printf("s%c\n", list->name);
 }
 //ra (rotate a): Shift up all elements of stack a by 1.
 //The first element becomes the last one.
@@ -57,6 +58,7 @@ void    rotate(t_list *list)
         //new last node is the old first (head of the list)
         list->tail = first;
     }
+        ft_printf("r%c\n", list->name);
 }
 
 void    rev_rotate(t_list *list)
@@ -86,6 +88,7 @@ void    rev_rotate(t_list *list)
         list->head = last;
     }
     //print rev rotate a ou b
+    ft_printf("rr%c\n", list->name);
 }
 
 void    push(t_list *receive, t_list *push)
@@ -102,4 +105,6 @@ void    push(t_list *receive, t_list *push)
         receive->size++;
     }
     //print pa or pb
+    ft_printf("p%c\n", push->name);
+
 }
