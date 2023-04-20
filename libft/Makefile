@@ -32,6 +32,7 @@ SRCS 	=	ft_isalpha.c\
 			ft_strmapi.c\
 			ft_striteri.c\
 			ft_split.c\
+			ft_atol.c\
 
 OBJS 	= 	$(SRCS:.c=.o)
 NAME 	= 	libft.a

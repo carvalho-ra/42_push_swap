@@ -24,25 +24,35 @@ void    print_list(t_list *list)
     printf("NULL\n");
 }
 
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
+//    if (validation(argc, argv) != 0)
+//        return (1);
+
     t_list  *list_a;
     t_list  *list_b;
+    
     int i;
 
     list_a = create_list('a');
     list_b = create_list('b');
     i = 1;
-    while (i < ac)
+    while (i < argc)
     {
-        add_node_bottom(list_a, ft_atoi(av[i]));
+        add_node_bottom(list_a, ft_atol(argv[i]));
         i++;
     }
     print_list(list_a);
-    // swap(list_a);
-    // print_list(list_a);
-    // rotate(list_a);
-    //rev_rotate(list_a);
+    printf("\n### swap list_a ###\n");
+    swap(list_a);
+    print_list(list_a);
+    printf("\n### rotate list_a ###\n");
+    rotate(list_a);
+    print_list(list_a);
+    printf("\n### reverse rotate list_a ###\n");
+    rev_rotate(list_a);
+    print_list(list_a);
+    printf("\n### push list_a to list_b ###\n");
     push(list_b, list_a);
     print_list(list_a);
     print_list(list_b);

@@ -6,7 +6,7 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 11:37:06 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/19 16:46:27 by rodrigo          ###   ########.fr       */
+/*   Updated: 2023/04/19 23:06:35 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ void    add_node_bottom(t_list *list, int data);
 t_list  *create_list(char name);
 
 //del_node_top();
+
+//funtion prototypes validation
+int check_char(int argc, char **argv);
+int check_max_min_int(int argc, char **argv);
+int check_dup(int argc, char **argv);
+int validation(int argc, char **argv);
 
 //function prototypes - sort operations
 void    swap(t_list *list);

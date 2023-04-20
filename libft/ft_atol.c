@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi copy.c                                     :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 10:19:47 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/19 17:06:37 by rodrigo          ###   ########.fr       */
+/*   Created: 2023/04/19 22:08:14 by rodrigo           #+#    #+#             */
+/*   Updated: 2023/04/19 22:10:20 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long int	ft_atoi(const char *str)
+long int	ft_atol(const char *str)
 {
 	long int		result;
 	size_t	count;

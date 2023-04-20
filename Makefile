@@ -4,6 +4,7 @@ SRCS = push_swap.c \
 	list.c \
 	node.c \
 	sort_ops.c \
+	validation.c \
 
 OBJS = $(SRCS:.c=.o)
 
