@@ -27,9 +27,34 @@ void    swap(t_list *list)
         //old third node points to the first node
         sec->next = first;
     }
-    //print rev rotate a ou b
+    //print swap a or b
     ft_printf("s%c\n", list->name);
 }
+
+//ss : sa and sb at the same time.
+// TO DO
+
+//pa (push a): Take the first element at the top of b and put it at the top of a.
+//Do nothing if b is empty.
+//pb (push b): Take the first element at the top of a and put it at the top of b.
+//Do nothing if a is empty.
+void    push(t_list *receive, t_list *push)
+{
+    t_node  *tmp;
+
+    tmp = push->head;
+    if (push->size > 0)
+    {
+        push->head = tmp->next;
+        tmp->next = receive->head;
+        receive->head = tmp;
+        push->size--;
+        receive->size++;
+    }
+    //print pa or pb
+    ft_printf("p%c\n", push->name);
+}
+
 //ra (rotate a): Shift up all elements of stack a by 1.
 //The first element becomes the last one.
 //rb (rotate b): Shift up all elements of stack b by 1.
@@ -63,6 +88,13 @@ void    rotate(t_list *list)
     ft_printf("r%c\n", list->name);
 }
 
+//rr : ra and rb at the same time.
+// TO DO
+
+//rra (reverse rotate a): Shift down all elements of stack a by 1.
+//The last element becomes the first one.
+//rrb (reverse rotate b): Shift down all elements of stack b by 1.
+//The last element becomes the first one.
 void    rev_rotate(t_list *list)
 {
     t_node  *first;
@@ -93,20 +125,5 @@ void    rev_rotate(t_list *list)
     ft_printf("rr%c\n", list->name);
 }
 
-void    push(t_list *receive, t_list *push)
-{
-    t_node  *tmp;
-
-    tmp = push->head;
-    if (push->size > 0)
-    {
-        push->head = tmp->next;
-        tmp->next = receive->head;
-        receive->head = tmp;
-        push->size--;
-        receive->size++;
-    }
-    //print pa or pb
-    ft_printf("p%c\n", push->name);
-
-}
+//rrr : rra and rrb at the same time.
+// TO DO
