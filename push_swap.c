@@ -42,6 +42,22 @@ int main(int argc, char **argv)
         add_node_bottom(list_a, ft_atol(argv[i]));
         i++;
     }
+    ft_printf("\n");
+    print_list(list_a);
+    if (list_a->size == 3)
+    {
+        sort_3(list_a, list_b);
+        print_list(list_a);
+        return (0);
+    }
+    if (list_a->size == 4)
+    {
+        sort_4(list_a, list_b);
+        print_list(list_a);
+    }
+    ft_printf("\n");
+    
+    /*
     print_list(list_a);
     swap(list_a);
     print_list(list_a);
@@ -55,7 +71,8 @@ int main(int argc, char **argv)
     push(list_a, list_b);
     print_list(list_a);
     print_list(list_b);
-    push(list_a, list_b);
+    push(list_b, list_a);
     print_list(list_a);
     print_list(list_b);
+    */
 }

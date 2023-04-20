@@ -5,6 +5,8 @@ SRCS = push_swap.c \
 	node.c \
 	sort_ops.c \
 	validation.c \
+	sort_3.c \
+	sort_4.c \
 
 OBJS = $(SRCS:.c=.o)
 

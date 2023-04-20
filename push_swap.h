@@ -6,7 +6,7 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 11:37:06 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/20 09:03:22 by rodrigo          ###   ########.fr       */
+/*   Updated: 2023/04/20 17:52:21 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,16 @@ int validation(int argc, char **argv);
 void    swap(t_list *list);
 void    rotate(t_list *list);
 void    rev_rotate(t_list *list);
-void    push(t_list *receive, t_list *push);
+void    push(t_list *push, t_list *receive);
+void    swap_both(t_list *list_a, t_list *list_b);
+void    rotate_both(t_list *list_a, t_list *list_b);
+void    rev_rotate_both(t_list *list_a, t_list *list_b);
 
 //function prototypes - sorting
+int sort_3(t_list *list_a, t_list *list_b);
+int sort_4(t_list *list_a, t_list *list_b);
+
+
 //radix();
 
 #endif
