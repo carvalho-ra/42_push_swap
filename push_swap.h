@@ -6,7 +6,7 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 11:37:06 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/19 23:06:35 by rodrigo          ###   ########.fr       */
+/*   Updated: 2023/04/20 09:03:22 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define PUSH_SWAP_H
 
 # include "./libft/libft.h"
-# include <stdlib.h>
-# include <stdio.h>
 
 //data
 typedef struct s_node
@@ -43,6 +41,7 @@ t_list  *create_list(char name);
 //del_node_top();
 
 //funtion prototypes validation
+int check_empty(int argc, char **argv);
 int check_char(int argc, char **argv);
 int check_max_min_int(int argc, char **argv);
 int check_dup(int argc, char **argv);
