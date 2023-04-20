@@ -26,9 +26,9 @@ void    swap(t_list *list)
         first->next = third;
         //old third node points to the first node
         sec->next = first;
+        //print swap a or b
+        ft_printf("s%c\n", list->name);
     }
-    //print swap a or b
-    ft_printf("s%c\n", list->name);
 }
 
 //ss : sa and sb at the same time.
@@ -50,9 +50,9 @@ void    push(t_list *receive, t_list *push)
         receive->head = tmp;
         push->size--;
         receive->size++;
+        //print pa or pb
+        ft_printf("p%c\n", push->name);
     }
-    //print pa or pb
-    ft_printf("p%c\n", push->name);
 }
 
 //ra (rotate a): Shift up all elements of stack a by 1.
@@ -83,9 +83,9 @@ void    rotate(t_list *list)
         first->next = NULL;
         //new last node is the old first (head of the list)
         list->tail = first;
+        //print rev rotate a ou b
+        ft_printf("r%c\n", list->name);
     }
-    //print rev rotate a ou b
-    ft_printf("r%c\n", list->name);
 }
 
 //rr : ra and rb at the same time.
@@ -109,7 +109,7 @@ void    rev_rotate(t_list *list)
         first = list->head;
         //second to last node
         sec_to_last = list->head;
-        //fazer um loop pra marcar o antepenultimo
+        //loop to find second to last node
         while (sec_to_last->next->next != NULL)
         {
             sec_to_last = sec_to_last->next;
@@ -120,9 +120,9 @@ void    rev_rotate(t_list *list)
         sec_to_last->next = NULL;
         list->tail = sec_to_last;
         list->head = last;
+        //print rev rotate a ou b
+        ft_printf("rr%c\n", list->name);
     }
-    //print rev rotate a ou b
-    ft_printf("rr%c\n", list->name);
 }
 
 //rrr : rra and rrb at the same time.
