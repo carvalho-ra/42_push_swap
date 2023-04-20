@@ -33,6 +33,14 @@ SRCS 	=	ft_isalpha.c\
 			ft_striteri.c\
 			ft_split.c\
 			ft_atol.c\
+			ft_itoa_pfu.c\
+			ft_printf.c\
+			ft_putchar_pf.c\
+			ft_puthex.c\
+			ft_putnbr_pf.c\
+			ft_putnbr_pfu.c\
+			ft_putptr.c\
+			ft_putstr_pf.c\
 
 OBJS 	= 	$(SRCS:.c=.o)
 NAME 	= 	libft.a
