@@ -43,17 +43,19 @@ int main(int argc, char **argv)
         i++;
     }
     print_list(list_a);
-    ft_printf("\n### swap list_a ###\n");
     swap(list_a);
     print_list(list_a);
-    ft_printf("\n### rotate list_a ###\n");
     rotate(list_a);
     print_list(list_a);
-    ft_printf("\n### reverse rotate list_a ###\n");
     rev_rotate(list_a);
     print_list(list_a);
-    ft_printf("\n### push list_a to list_b ###\n");
     push(list_b, list_a);
+    print_list(list_a);
+    print_list(list_b);
+    push(list_a, list_b);
+    print_list(list_a);
+    print_list(list_b);
+    push(list_a, list_b);
     print_list(list_a);
     print_list(list_b);
 }
