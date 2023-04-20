@@ -1,5 +1,7 @@
 #include "push_swap.h"
 
+//If no parameters are specified, the program must not display anything and give the
+//prompt back.
 //argument is empty
 int check_empty(int argc, char **argv)
 {
@@ -20,6 +22,7 @@ int check_empty(int argc, char **argv)
     return (0);
 }
 
+//In case of error, it must display "Error" followed by a ’\n’ on the standard error.
 //argument is digit (has char?)
 int check_char(int argc, char **argv)
 {
@@ -36,6 +39,7 @@ int check_char(int argc, char **argv)
             {
                 if (!((argv[i][j] == '+' || argv[i][j] == '-') && (j == 0) && (ft_strlen(argv[i]) > 1)))
                 {
+                    ft_printf("Error\n");
                     return (1);
                 }
             }
@@ -45,6 +49,8 @@ int check_char(int argc, char **argv)
     }
     return (0);
 }
+
+//In case of error, it must display "Error" followed by a ’\n’ on the standard error.
 //int max and min
 int check_max_min_int(int argc, char **argv)
 {
@@ -55,6 +61,7 @@ int check_max_min_int(int argc, char **argv)
     {
         if(ft_atol(argv[i]) > 2147483648)
         {
+            ft_printf("Error\n");
             return (1);
         }
         i++;
@@ -62,6 +69,7 @@ int check_max_min_int(int argc, char **argv)
     return (0);
 }
 
+//In case of error, it must display "Error" followed by a ’\n’ on the standard error.
 //duplicated value
 int check_dup(int argc, char **argv)
 {
@@ -76,6 +84,7 @@ int check_dup(int argc, char **argv)
         {
             if (ft_atol(argv[i]) == ft_atol(argv[j]))
             {
+                ft_printf("Error\n");
                 return (1);
             }
             j++;
