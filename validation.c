@@ -90,7 +90,7 @@ int validation(int argc, char **argv)
 {
     if (check_empty(argc, argv) == 1)
     {
-        ft_printf("argument empty\n");
+        ft_printf("empty argument\n");
         return (-1);
     }
     if(check_char(argc, argv) == 1)
