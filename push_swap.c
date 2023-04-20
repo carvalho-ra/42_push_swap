@@ -10,24 +10,24 @@ void    print_list(t_list *list)
     tmp = list->head;
     
     //for printing purposes, print begining of the list
-    printf("list_%c (size = %i)-> ", list->name, list->size);
+    ft_printf("list_%c (size = %i)-> ", list->name, list->size);
 
     //while the tmp pointer in pointing to some node (there's a node in the list)
     while(tmp)
     {
         //access tha data in this node and print it
-        printf("%d -> ", tmp->data);
+        ft_printf("%d -> ", tmp->data);
         //then, poit to the next node (same as next in this node)
         tmp = tmp->next;
     }
     //print the place where the last node is pointing 
-    printf("NULL\n");
+    ft_printf("NULL\n");
 }
 
 int main(int argc, char **argv)
 {
-//    if (validation(argc, argv) != 0)
-//        return (1);
+    if (validation(argc, argv) != 0)
+        return (1);
 
     t_list  *list_a;
     t_list  *list_b;
@@ -43,16 +43,16 @@ int main(int argc, char **argv)
         i++;
     }
     print_list(list_a);
-    printf("\n### swap list_a ###\n");
+    ft_printf("\n### swap list_a ###\n");
     swap(list_a);
     print_list(list_a);
-    printf("\n### rotate list_a ###\n");
+    ft_printf("\n### rotate list_a ###\n");
     rotate(list_a);
     print_list(list_a);
-    printf("\n### reverse rotate list_a ###\n");
+    ft_printf("\n### reverse rotate list_a ###\n");
     rev_rotate(list_a);
     print_list(list_a);
-    printf("\n### push list_a to list_b ###\n");
+    ft_printf("\n### push list_a to list_b ###\n");
     push(list_b, list_a);
     print_list(list_a);
     print_list(list_b);
