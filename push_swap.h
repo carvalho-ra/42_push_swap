@@ -6,7 +6,7 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 11:37:06 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/20 17:52:21 by rodrigo          ###   ########.fr       */
+/*   Updated: 2023/04/21 18:17:56 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 typedef struct s_node
 {
 	int				data;
+	int				index;
 	struct s_node	*next;
 }	t_node;
 
@@ -57,8 +58,10 @@ void    rotate_both(t_list *list_a, t_list *list_b);
 void    rev_rotate_both(t_list *list_a, t_list *list_b);
 
 //function prototypes - sorting
+int is_sorted(t_list *list);
 int sort_3(t_list *list_a, t_list *list_b);
 int sort_4(t_list *list_a, t_list *list_b);
+// int find_min_data(t_list *list_a, t_list *list_b);
 
 
 //radix();

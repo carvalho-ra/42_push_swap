@@ -7,6 +7,7 @@ SRCS = push_swap.c \
 	validation.c \
 	sort_3.c \
 	sort_4.c \
+#	find_min_data.c \
 
 OBJS = $(SRCS:.c=.o)
 

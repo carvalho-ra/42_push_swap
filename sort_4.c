@@ -13,3 +13,8 @@ int sort_4(t_list *list_a, t_list *list_b)
     }
     return (0);
 }
+
+// funcao para verificar qual o menor elemento
+
+// enquanto o data da stack for diferente no menor valor.
+// revrot consome menos 

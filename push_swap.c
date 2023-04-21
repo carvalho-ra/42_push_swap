@@ -48,7 +48,6 @@ int main(int argc, char **argv)
     {
         sort_3(list_a, list_b);
         print_list(list_a);
-        return (0);
     }
     if (list_a->size == 4)
     {
@@ -56,6 +55,7 @@ int main(int argc, char **argv)
         print_list(list_a);
     }
     ft_printf("\n");
+    return (0);
     
     /*
     print_list(list_a);
