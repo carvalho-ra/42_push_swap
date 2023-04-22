@@ -20,6 +20,9 @@ int main(int argc, char **argv)
     }
     // ft_printf("\n");
     // print_list(list_a);
+    //verify if list is already sorted
+    if (is_sorted(list_a))
+        return (0);
     if (list_a->size == 3)
         sort_3(list_a);
     if (list_a->size == 4)
