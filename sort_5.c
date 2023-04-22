@@ -2,12 +2,19 @@
 
 int sort_5(t_list *list_a, t_list *list_b)
 {
-    t_node  *curr;
+    int     min;
 
-    curr = list_a->head;
-    while (curr)
-    {
-        if ()
-    }
+    min = find_min_data(list_a);
+    ft_printf("min = %i\n", min);
+    while(list_a->head->data != min)
+        rotate(list_a);
+    push(list_a, list_b);
+    min = find_min_data(list_a);
+    while(list_a->head->data != min)
+        rotate(list_a);
+    push(list_a, list_b);
+    sort_3(list_a);
+    push(list_b, list_a);
+    push(list_b, list_a);
     return (0);
 }

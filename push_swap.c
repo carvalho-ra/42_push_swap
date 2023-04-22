@@ -1,29 +1,5 @@
 #include "push_swap.h"
 
-//print list
-void    print_list(t_list *list)
-{
-    //must have a temporary poiter to a node
-    t_node  *tmp;
-
-    //it must poit to the first node, same as list->head
-    tmp = list->head;
-    
-    //for printing purposes, print begining of the list
-    ft_printf("list_%c (size = %i)-> ", list->name, list->size);
-
-    //while the tmp pointer in pointing to some node (there's a node in the list)
-    while(tmp)
-    {
-        //access tha data in this node and print it
-        ft_printf("%d -> ", tmp->data);
-        //then, poit to the next node (same as next in this node)
-        tmp = tmp->next;
-    }
-    //print the place where the last node is pointing 
-    ft_printf("NULL\n");
-}
-
 int main(int argc, char **argv)
 {
     if (validation(argc, argv) != 0)
@@ -45,34 +21,12 @@ int main(int argc, char **argv)
     ft_printf("\n");
     print_list(list_a);
     if (list_a->size == 3)
-    {
-        sort_3(list_a, list_b);
-        print_list(list_a);
-    }
+        sort_3(list_a);
     if (list_a->size == 4)
-    {
         sort_4(list_a, list_b);
-        print_list(list_a);
-    }
+    if (list_a->size == 5)
+        sort_5(list_a, list_b);
+    print_list(list_a);
     ft_printf("\n");
     return (0);
-    
-    /*
-    print_list(list_a);
-    swap(list_a);
-    print_list(list_a);
-    rotate(list_a);
-    print_list(list_a);
-    rev_rotate(list_a);
-    print_list(list_a);
-    push(list_b, list_a);
-    print_list(list_a);
-    print_list(list_b);
-    push(list_a, list_b);
-    print_list(list_a);
-    print_list(list_b);
-    push(list_b, list_a);
-    print_list(list_a);
-    print_list(list_b);
-    */
 }
