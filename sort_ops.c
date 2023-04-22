@@ -56,7 +56,7 @@ void    push(t_list *push, t_list *receive)
         push->size--;
         receive->size++;
         //print pa or pb
-        ft_printf("p%c\n", push->name);
+        ft_printf("p%c\n", receive->name);
     }
 }
 
