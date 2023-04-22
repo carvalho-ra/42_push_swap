@@ -2,15 +2,15 @@
 
 int sort_4(t_list *list_a, t_list *list_b)
 {
-    // t_node  *tmp;
     int     min;
 
-    // tmp = list_a->head;
     min = find_min_data(list_a);
     while(list_a->head->data != min)
     {
-        rotate(list_a);
-//        tmp = list_a->head;
+        if (list_a->head->data > list_a->head->next->data)
+            swap(list_a);
+        else
+            rev_rotate(list_a);
     }
     push(list_a, list_b);
     sort_3(list_a);

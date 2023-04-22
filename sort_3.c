@@ -3,13 +3,9 @@
 
 int sort_3(t_list *list)
 {
-    t_node  *tmp;
-
-    tmp = list->head;
     while (!(is_sorted(list)))
     {
-        tmp = list->head;
-        if ((tmp->data > tmp->next->data))
+        if ((list->head->data > list->head->next->data))
             swap(list);
         else
             rev_rotate(list);

@@ -18,15 +18,15 @@ int main(int argc, char **argv)
         add_node_bottom(list_a, ft_atol(argv[i]));
         i++;
     }
-    ft_printf("\n");
-    print_list(list_a);
+    // ft_printf("\n");
+    // print_list(list_a);
     if (list_a->size == 3)
         sort_3(list_a);
     if (list_a->size == 4)
         sort_4(list_a, list_b);
     if (list_a->size == 5)
         sort_5(list_a, list_b);
-    print_list(list_a);
-    ft_printf("\n");
+    // print_list(list_a);
+    // ft_printf("\n");
     return (0);
 }
