@@ -17,4 +17,5 @@ int sort_5(t_list *list_a, t_list *list_b)
     push(list_b, list_a);
     push(list_b, list_a);
     return (0);
+    //erro, 13 acoes para 3 5 4 2 1 
 }
