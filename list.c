@@ -79,3 +79,14 @@ int find_min_data(t_list *list)
     }
     return (min_data);
 }
+
+//delete entire list
+void    del_list(t_list *list)
+{
+    //while there is a fisrt node to be freed
+    while(list->head != NULL)
+    {
+        del_node_top(list);
+    }
+    free(list);
+}

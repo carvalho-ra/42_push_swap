@@ -29,6 +29,8 @@ int main(int argc, char **argv)
         sort_4(list_a, list_b);
     if (list_a->size == 5)
         sort_5(list_a, list_b);
+    del_list(list_a);
+    del_list(list_b);
     // print_list(list_a);
     // ft_printf("\n");
     return (0);

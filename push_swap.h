@@ -6,7 +6,7 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 11:37:06 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/21 23:22:30 by rodrigo          ###   ########.fr       */
+/*   Updated: 2023/04/22 13:19:16 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,14 @@ typedef struct s_list
 t_node  *create_node(int data);
 void    add_node_top(t_list *list, int data);
 void    add_node_bottom(t_list *list, int data);
-//void	del_first_node(t_list *list); --- TO DO
-//void	del_last_node(t_list *list); --- TO DO
+void	del_node_top(t_list *list);
 
 //function prototypes - list
 t_list  *create_list(char name);
 void    print_list(t_list *list);
 int is_sorted(t_list *list);
 int find_min_data(t_list *list);
-//void	del_list(t_list *list); --- TO DO
+void    del_list(t_list *list);
 
 //funtion prototypes validation
 int check_empty(int argc, char **argv);

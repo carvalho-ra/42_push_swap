@@ -71,3 +71,24 @@ void    add_node_bottom(t_list *list, int data)
         list->size++;
     }
 }
+
+//delete node at the top of the list
+void    del_node_top(t_list *list)
+{
+    //create a pointer to a node
+    t_node  *del_node;
+
+    //if the list is empty
+    if (list->head == NULL)
+        return ;
+    //if there is a fisrt node to be freed
+    //del_node points to the same place as head o the list
+    //(first node)
+    del_node = list->head;
+    //the head of the list points to the second node
+    list->head = list->head->next;
+    //freee the node disconected from the list
+    free(del_node);
+    //size of list decreased
+    list->size--;
+}
