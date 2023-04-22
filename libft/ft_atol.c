@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/19 22:08:14 by rodrigo           #+#    #+#             */
-/*   Updated: 2023/04/19 22:10:20 by rodrigo          ###   ########.fr       */
+/*   Created: 2023/04/22 18:03:29 by rcarvalh          #+#    #+#             */
+/*   Updated: 2023/04/22 18:03:58 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 long int	ft_atol(const char *str)
 {
-	long int		result;
-	size_t	count;
-	int		sign;
+	long int	result;
+	size_t		count;
+	int			sign;
 
 	sign = 1;
 	result = 0;
