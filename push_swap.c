@@ -6,7 +6,7 @@
 /*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:26:38 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/22 18:27:22 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:02:29 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ int	main(int argc, char **argv)
 	}
 	if (is_sorted(list_a))
 		return (0);
-	if (list_a->size == 3)
+	else if (list_a->size == 3)
 		sort_3(list_a);
-	if (list_a->size == 4)
+	else if (list_a->size == 4)
 		sort_4(list_a, list_b);
-	if (list_a->size == 5)
+	else if (list_a->size == 5)
 		sort_5(list_a, list_b);
+	else
+		radix(list_a, list_b);
 	del_list(list_a);
 	del_list(list_b);
 	return (0);

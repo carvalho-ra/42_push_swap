@@ -6,7 +6,7 @@
 /*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:47:13 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/22 17:51:26 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:29:31 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ void	rev_rotate_both(t_list *list_a, t_list *list_b);
 int		sort_3(t_list *list_a);
 int		sort_4(t_list *list_a, t_list *list_b);
 int		sort_5(t_list *list_a, t_list *list_b);
-//radix() --- TO DO
+void	radix(t_list *list_a, t_list *list_b);
 
 #endif

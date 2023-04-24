@@ -8,6 +8,7 @@ SRCS = push_swap.c \
 	sort_3.c \
 	sort_4.c \
 	sort_5.c \
+	radix.c \
 
 OBJS = $(SRCS:.c=.o)
 
