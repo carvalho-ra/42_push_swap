@@ -6,7 +6,7 @@
 /*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:57:27 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/22 18:24:30 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/25 15:14:37 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ void	print_list(t_list *list)
 	ft_printf("list_%c (size = %i)-> ", list->name, list->size);
 	while (tmp)
 	{
-		ft_printf("%d -> ", tmp->data);
+		ft_printf("%d(index = %d) -> ", tmp->data, tmp->index);
+
 		tmp = tmp->next;
 	}
 	ft_printf("NULL\n");
