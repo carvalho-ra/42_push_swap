@@ -43,10 +43,6 @@ t_list  *index_list(t_list *bubble_sorted_list, t_list *list_a)
         temp = temp->next;
     }
     del_list(bubble_sorted_list);
-    write (1, "\ndeleted_list\n", 14);
-    print_list(bubble_sorted_list);
-    write (1, "\nindexed_list\n", 14);
-    print_list(list_a);
     return (list_a);
 }
 
@@ -61,10 +57,6 @@ t_list  *bubble_sort(t_list *list)
 
     i = 0;
     bubble = cp_list(list);
-    write (1, "\noriginal_list\n", 15);
-    print_list(list);
-    write (1, "\ncopied_list\n", 13);
-    print_list(bubble);
     while (i < bubble->size - 1)
     {
         tmp = bubble->head;
@@ -82,8 +74,6 @@ t_list  *bubble_sort(t_list *list)
         }
         i++;
     }
-    write (1, "\nsorted_list\n", 13);
-    print_list(bubble);
     return (bubble);
 }
 
@@ -121,5 +111,4 @@ void radix(t_list *list_a, t_list *list_b)
             push(list_b, list_a);
         i++;
     }
-    print_list(list_a);
 }

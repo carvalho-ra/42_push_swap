@@ -6,7 +6,7 @@
 /*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:43:29 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/22 17:44:29 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:46:55 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	check_char(int argc, char **argv)
 				if (!((argv[i][j] == '+' || argv[i][j] == '-') &&
 					(j == 0) && (ft_strlen(argv[i]) > 1)))
 				{
-					ft_printf("Error\n");
+					write(2, "Error\n", 6);
 					return (1);
 				}
 			}
@@ -66,7 +66,7 @@ int	check_max_min_int(int argc, char **argv)
 	{
 		if (ft_atol(argv[i]) > 2147483648)
 		{
-			ft_printf("Error\n");
+			write(2, "Error\n", 6);
 			return (1);
 		}
 		i++;
@@ -87,7 +87,7 @@ int	check_dup(int argc, char **argv)
 		{
 			if (ft_atol(argv[i]) == ft_atol(argv[j]))
 			{
-				ft_printf("Error\n");
+				write(2, "Error\n", 6);
 				return (1);
 			}
 			j++;
