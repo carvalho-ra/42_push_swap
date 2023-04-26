@@ -1,18 +1,25 @@
 #include "push_swap.h"
 
-void cp_list(t_list *list_a, t_list *list_c)
+//cp_list returns the new list copied
+t_list  *cp_list(t_list *list)
 {
-    t_node *tmp;
+    t_list  *new_list;
+    t_node  *tmp;
 
-    tmp = list_a->head;
+    new_list = create_list('c');
+    tmp = list->head;
     while (tmp)
     {
-        add_node_bottom(list_c, tmp->data);
+        add_node_bottom(new_list, tmp->data);
         tmp = tmp->next;
     }
+    return (new_list);
 }
 
-void    index_list(t_list *bubble, t_list *list_a)
+//indexes one list according to another one
+//returns the indexed list
+//free the other list
+t_list  *index_list(t_list *bubble, t_list *list_a)
 {
     int        i;
     t_node    *temp;
@@ -35,9 +42,16 @@ void    index_list(t_list *bubble, t_list *list_a)
         }
         temp = temp->next;
     }
+    del_list(bubble);
+    write (1, "\ndeleted_list\n", 14);
+    print_list(bubble);
+    write (1, "\nindexed_list\n", 14);
+    print_list(list_a);
+    return (list_a);
 }
 
-void bubble_sort(t_list *list_a)
+//bubble sort a list and returns it 
+t_list  *bubble_sort(t_list *list)
 {
     t_list *bubble;
     t_node *tmp;
@@ -46,10 +60,11 @@ void bubble_sort(t_list *list_a)
     unsigned int j;
 
     i = 0;
-    bubble = create_list('c');
-    cp_list(list_a, bubble);
+    bubble = cp_list(list);
+    write (1, "\noriginal_list\n", 15);
+    print_list(list);
+    write (1, "\ncopied_list\n", 13);
     print_list(bubble);
-    write (1, "bubble\n", 7);
     while (i < bubble->size - 1)
     {
         tmp = bubble->head;
@@ -63,19 +78,33 @@ void bubble_sort(t_list *list_a)
                 tmp->next->data = aux;
             }
             j++;
-                    // print_list(bubble);
-                    // write (1, "\n", 1);
             tmp = tmp->next;
         }
         i++;
     }
+    write (1, "\nsorted_list\n", 13);
     print_list(bubble);
-    index_list(bubble, list_a);
-    print_list(list_a);
+    return (bubble);
 }
 
 void radix(t_list *list_a, t_list *list_b)
 {
-    (void)list_b;
-    bubble_sort(list_a);
+    t_node  *tmp_a;
+
+    tmp_a = list_a->head;
+    index_list(bubble_sort(list_a), list_a);
+    while (tmp_a)
+    {
+        if (tmp_a->data % 10 == 0)
+        {
+            push(list_a, list_b);
+        }
+        else
+        {
+            rotate(list_a);
+        }
+        tmp_a = tmp_a->next;
+    }
+    print_list(list_a);
+    print_list(list_b);
 }

@@ -6,7 +6,7 @@
 /*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:47:13 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/25 15:52:15 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:44:52 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,9 @@ int		sort_3(t_list *list_a);
 int		sort_4(t_list *list_a, t_list *list_b);
 int		sort_5(t_list *list_a, t_list *list_b);
 
-void	cp_list(t_list *list_a, t_list *list_c);
-void    index_list(t_list *bubble, t_list *list_a);
-void	bubble_sort(t_list *list_a);
+t_list	*cp_list(t_list *list);
+t_list	*index_list(t_list *bubble, t_list *list_a);
+t_list	*bubble_sort(t_list *list_a);
 
 void	radix(t_list *list_a, t_list *list_b);
 
