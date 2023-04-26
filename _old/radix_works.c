@@ -100,6 +100,9 @@ void radix(t_list *list_a, t_list *list_b)
     i = 0;
     j = 0;
     index_list(bubble_sort(list_a), list_a);
+    write (1, "\n- - - RADIX - - -\n\n", 20);
+    print_list(list_a);
+    print_list(list_b);
     tmp_a = list_a->head;
     //count number of bits of greater index
     while (((list_a->size - 1) >> bit) != 0)
@@ -117,9 +120,14 @@ void radix(t_list *list_a, t_list *list_b)
                 push(list_a, list_b);
             size--;
         }
+        print_list(list_a);
+        print_list(list_b);
         while (list_b->size > 0)
             push(list_b, list_a);
         i++;
+        print_list(list_a);
+        print_list(list_b);
     }
     print_list(list_a);
+    print_list(list_b);
 }

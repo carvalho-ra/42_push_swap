@@ -6,7 +6,7 @@
 /*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:47:13 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/26 11:44:52 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/26 13:49:19 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "./libft/libft.h"
+#include <stdio.h>
 
 //data
 typedef struct s_node
