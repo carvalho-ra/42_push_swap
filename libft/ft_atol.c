@@ -6,7 +6,7 @@
 /*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:03:29 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/22 18:03:58 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/27 19:16:17 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ long int	ft_atol(const char *str)
 	while (ft_isdigit(str[count]) == 1)
 	{
 		result = (result * 10) + (str[count] - '0');
-		if (result > 2147483647 || result < -2147483648)
+		if (result >= 2147483647 || result <= -2147483648)
 		{
 			return (2999999999);
 		}
