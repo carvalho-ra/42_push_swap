@@ -6,7 +6,7 @@
 /*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:43:29 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/26 18:46:55 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:03:59 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	check_empty(int argc, char **argv)
 	{
 		if (ft_strlen(argv[i]) == 0)
 		{
+			if (argc > 2)
+				write(2, "Error\n", 6);
 			return (1);
 		}
 		i++;
