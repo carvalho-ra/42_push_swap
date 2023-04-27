@@ -6,7 +6,7 @@
 /*   By: rcarvalh <rcarvalh@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:26:38 by rcarvalh          #+#    #+#             */
-/*   Updated: 2023/04/27 09:43:13 by rcarvalh         ###   ########.fr       */
+/*   Updated: 2023/04/27 13:04:45 by rcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,8 @@ int	main(int argc, char **argv)
 		add_node_bottom(list_a, ft_atol(argv[i]));
 		i++;
 	}
-	if (is_sorted(list_a))
-		return (0);
-	which_sort(list_a, list_b);
+	if (!is_sorted(list_a))
+		which_sort(list_a, list_b);
 	del_list(list_a);
 	del_list(list_b);
 	return (0);
