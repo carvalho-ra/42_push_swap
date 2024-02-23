@@ -19,22 +19,22 @@ Given 2 stacks a and b. Sort in ascending order numbers into stack a, using the 
 
 ### 🛠️ Usage
 
-compile the project using the provided Makefile: ```make```  
+Compile the project using the provided Makefile: ```make```  
 Runnig the executable followed by a list of arguments as parameters will output the list of movements to sort the list.  
 
 ./push_swap 2 1 -3 5
 
-Use the command bellow for passing arguments list:
+Use the command bellow for passing a list of arguments:
 
 zsh: ```ARG="4 67 3 87 23”; ./push_swap ${=ARG}```  
 bash: ```ARG="4 67 3 87 23"; ./push_swap $ARG```  
 
-Use the command bellow for passing arguments list running the checker:
+Use the command bellow for passing a list of arguments and run the checker:
 
 zsh: ```ARG="4 67 3 87 23”; ./push_swap ${=ARG} | ./checker ${=ARG}```  
 bash: ```ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG```  
 
-Use the command bellow for passing arguments list and count lines:
+Use the command bellow for passing a list of arguments and count lines:
 
 zsh: ```ARG="4 67 3 87 23”; ./push_swap ${=ARG} | wc -l```  
 bash: ```ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l```  
