@@ -1,6 +1,6 @@
 # Push_swap
 
-### 💡 About the project
+## 💡 About the project
 
 This project aims to sort data on a stack, with a limited set of instructions, using the lowest possible number of actions.
 
@@ -54,5 +54,5 @@ zsh: ```ARG="4 67 3 87 23”; ./push_swap ${=ARG} | wc -l```
 
 bash: ```ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l```
 
-### 📋 Results
+## 📋 Results
 
