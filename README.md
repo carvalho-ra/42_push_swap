@@ -39,5 +39,6 @@ Use the command bellow for passing arguments list and count lines:
 zsh: ```ARG="4 67 3 87 23”; ./push_swap ${=ARG} | wc -l```  
 bash: ```ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l```  
 
-## 📋 Results
+### 📋 Results
 
+![push_swap_img.png](push_swap_img.png)
